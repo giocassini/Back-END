@@ -1,32 +1,20 @@
-var cor ="azul";
-var cor="vermelho";
-console.log(cor);
-
-let fruta = "manga";
-fruta = "uva"; // ✅ Sem o "let" aqui!
-console.log(fruta);
+// TIPOS DE DADOS
+// No JavaScript, tudo o que armazenamos em variáveis tem um tipo.esses tipos definem o que podemos fazer com os valores. //
 
 
+//Principais tipos de dados :
+// String (textos)
+// Number (números)
+//Boolean(verdadeiro ou falso)
+//object(Objetos, que agrupam informações)
+//Array(listade valores)
+//null(valor vazio)
+//undefind(quando algo não foi definido)
 
 
-// -------------------------------
-// FORMAS DE ESCREVER UM CÓDIGO
-// -------------------------------
+console.log(nome);
+console.log(mensagem);
 
-// CAMEL CASE ----- * A mais Famosa
-// - Primeira palavra minúscula 
-// - Palavra seguintes começam com maiúcula 
+let saudação = "Olá, " + nome + "!";
+console.lot(saudação); //EXIBE "OLÁ, JARVIS"
 
-// let nomeCompleto; let idadeUsuario; functionCalcularidade(){}
-let NOMECOMPLETO;
-
-//_____________________________
-// PASCALCE
-// - Todas as palavras começam com letra maiúscula
-
-class UsuarioSistema {
-    constructor(nome, idade) {
-        this.nome = nome;
-        this.idade = idade ;
-    }
-}

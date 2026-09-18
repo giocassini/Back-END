@@ -18,3 +18,14 @@ console.log(mensagem);
 let saudação = "Olá, " + nome + "!";
 console.lot(saudação); //EXIBE "OLÁ, JARVIS"
 
+let nomeDois = "Bryran";
+console.log(typeof nomeDois);
+
+let soma = 10 + 5;
+console.log(soma);
+
+
+
+
+
+

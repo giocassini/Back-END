@@ -55,6 +55,16 @@ function aumentosalário(salarioatual, porcentagem){
     return salarioatual * (1+ porcentagem); 
 }
 
-console.log(aumentosalário(2500, 0.25));
+console.log(aumentosalário(2000, 0.25));
 
-// 5 - 
+// 5 - VERIFIQUE SE É PAR OU IMPAR?
+function parouimpar(numero) {
+    if (numero % 2 === 0) {
+        return "par";
+    } else {
+        return "impar";
+    }
+}
+console.log(parouimpar(8));
+
+     

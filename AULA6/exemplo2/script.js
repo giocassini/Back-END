@@ -20,6 +20,18 @@ console.log(titulo);
 console.log(caixas);
 console.log(imagem);
 
+// ===================================
+// Função para alterar o conteúdo
+// ===================================
 
+let título = document.getElementById("titulo");
+let subtítulo = document.getElementById("subtitulo");
+let paragrafo = document.getElementById("paragrafo");
+
+function alterar() {
+    titulo.innerText = "Jarvis dominou tudo!";
+    subtitulo.innerText = "Só que não!";
+    paragrafo.innerText = "O texto do parágrafo foi modificado pelo JavaScript";
+} 
 
 

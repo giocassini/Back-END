@@ -12,7 +12,7 @@
   401 - não autorizada (sem login)
   403 - proibido (login sem permissão)
   404 - não encontrado 
-
+  429 - muitas requisições em pouco tempo
 5xx - ERRO DO SERVIDOR (Eles erraram)
    500 - erro interno no servidor
    503 - serviço indisponível 
@@ -20,7 +20,7 @@
 CENÁRIO: Você pede uma pizza!🍕
 200 = "Aqui está sua pizza"✅
 404 = "Não temos essa pizza"❌
-500 = "O forno quiemou ou quebrou"🔥
+500 = "O forno quiemou ou quebrou"💥
 401 = "Só entregamos para clientes"🔒
 429 = "Muitos pedidos, aguarde"⌛
 

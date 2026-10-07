@@ -24,6 +24,7 @@ Cidade: SP         "cidade": "SP"
   }
 }
 
+
 <!-- ================================================================= -->
 EXPLICAÇÃO
 <!-- ================================================================= -->
@@ -48,6 +49,14 @@ EXPLICAÇÃO
 
 // Null (Vazio)
 "datadefalecimento": null
+ 
+
+ Crie um JSON representando:
+
+1. Seu filme favorito (título, ano, diretor, gêneros)
+2. Um aluno (nome, idade, notas, aprovado)
+3. Um produto (nome, preço, quantidade, disponível)
+
 
 
 

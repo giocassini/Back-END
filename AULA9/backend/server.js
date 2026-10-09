@@ -61,3 +61,67 @@ function sortear(arry) {
     // retorna o item sorteado 
     return arry[i];
 }
+// =========================
+// Rotas da API
+// =========================
+
+// ROTA 1 - Cachorro aleatório
+app.get("./api/cachorro/aleatorio", (req, res) => {
+// req - request(requisição) = é o pedido que chega ao servidor, por exemplo, o navegador pede uma foto de cachorro
+// res - response(resposta) = é o que servidor envia de volta, por exemplo, o endereço da foto do cachorro
+
+// pegar todas as fotos as raças
+// object.values pega os valores do objeto
+// flat transforma tudo em um único array
+const todasAsFotos = Object.values(cachorros).flat();
+})
+
+//Sorteia uma foto aleatória 
+const item = sortear(todasAsFotos)
+
+// Responder parao cliente em formato JSON
+res.json({
+    // status da resposta 
+    status: "success",
+    // URL da imagem que foi sorteada
+    message: `http://localhost:${PORT}/fotos/${item}`
+});
+
+// ROTA 2 - Cachorro por raça 
+// exemplo de acesso:
+// http://localhost:3000/api/cachorros/husky
+
+app.get("/api/cachorros/:raça", (req, res) => {
+    
+    // pega o parametro da URL (ex:husky)
+    const raça = req.params.raca.toLocaleLowerCase();
+    // params = contém os parâmentros definidos na URL da rota
+    //.raça = acessa o parâmetro chamado raça. 
+    //.toLowerCase() = Transforma todas as letras em minúsculas
+    if (!cachorros[raça]) {
+       //cachorros[raça]: Procurar a raça dentro do objeto *Cachorros*
+       //!: significa não: Nesse caso, verifique se a raça não existe ou se seu valor é falso
+       // se não existir, retorna erro 404
+    res.status(404).json({
+    status: "error",
+    message: `Raça "${raça}" não encontrada.`
+});
+     // encerra a execução da rota
+     return;
+    }
+
+    //sorteia uma fotoda raca solicitada 
+    const iten = sortear(cachorros[raça]);
+    
+    // retorna a resposta em Json
+    res.json({
+        status: "success", 
+        message: `http://localhost:${PORT}/fotos/${item}`
+    });
+});
+
+// ==================================
+// INICIA O SERVIDOR
+// ==================================
+
+//inicia o

@@ -124,4 +124,8 @@ app.get("/api/cachorros/:raça", (req, res) => {
 // INICIA O SERVIDOR
 // ==================================
 
-//inicia o
+//inicia o servidor express
+app.listen(PORT, () => {
+    console.log(`🚀Servidor rodando em http://localhost:${PORT}`)
+    console.log(`🚀Coloque as fotos manualmente em: data/fotos/`)
+});

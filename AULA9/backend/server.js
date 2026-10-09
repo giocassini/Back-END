@@ -20,7 +20,8 @@ const fs = require("fs")
 // Importa utilidades para trrabalhar com caminhos de arquivos 
 const path = require("path");
 // Imorta o arquivo JSON que contém as raças e fotos
-const cachorros = require("./data/dogs.json")
+const cachorros = require("./data/dogs.json");
+const { match } = require("assert");
 // cria aplicação Express 
 const app = express();
 // definir a porta onde o servidor irá rodar
@@ -43,3 +44,20 @@ app.use(
         path.join(__dirname, "data/fotos") // caminho real da pasta do servidor
     )
 )
+
+//=============================
+// Função Auxiliar
+//=============================
+
+// Função que recebe um arry e retorna um item aleatório dele
+function sortear(arry) {
+    // gera um número aleatório entre 0 e o tamanho do array
+    // array.length - conta quantos itens existem na lista
+    // math.random() - Sorteia um número decimal entre 0 e 1
+    // math.random() * array.length - multiplica o número sorteado pela quantidade de itens
+    // math.floor() - tira a parte decimal, arredonda para baixo.
+    const i = math.floor(math.random() * arrayBuffer.length)
+    // Guarda a posição na váriavel i 
+    // retorna o item sorteado 
+    return arry[i];
+}

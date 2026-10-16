@@ -1,0 +1,6 @@
+-- database: ./banco.db
+
+-- Pressione o botão ▷ no canto superior direito da janela para executar todo o arquivo.
+
+SELECT * FROM "table-name";
+-- database: banco.db
